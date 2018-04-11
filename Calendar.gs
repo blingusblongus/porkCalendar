@@ -34,6 +34,7 @@ function createNewEvent() {
 
 
 // May not neet this guy - working a different direction
+/*
 function editSingle(e) {
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = ss.getSheetByName("Upcoming Gigs");
@@ -46,6 +47,7 @@ function editSingle(e) {
     calendar.getEventById(iCalId)
 
 }
+*/
 
 
 function getHeaderRow(header) { //Finished!
