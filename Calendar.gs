@@ -9,26 +9,16 @@ function properties() {
         hash[values[i][0]] = parseFloat(i)+1;
     };
 
-
     return {
         ss: SpreadsheetApp.getActiveSpreadsheet(),
         sheet: SpreadsheetApp.getActiveSpreadsheet().getActiveSheet(),
         calId: "calId", // PLACEHOLDER
-
-        // Should I do this, or a hash table?
-        /*
-        rows: {
-            eventId: getHeaderRow("Event ID"),
-            date: getHeaderRow("Date"),
-            confirmed: getHeaderRow("Confirmed?"),
-            contact: getHeaderRow("")
-        }
-        */
-
         rows: hash
     }
 }
-
+\
+//Probably won't use this on first build --- easier to loop all columns once/day
+/*
 function onEdit(e) {
     //Load properties
     var props = properties();
@@ -43,10 +33,25 @@ function onEdit(e) {
 
         Logger.log(calId);
 }
+*/
+
 
 //Create Data Object
 
-function gatherData(column){
+function gatherData(column, props){
+    var sheet = props.sheet;
+    var hash = props.rows;
+    var row = {
+        // Maybe I should just trim down the calendar so that it includes all of them?
+        // THESE I'LL NEED TO CHANGE IF THERE ARE ANY LABELING CHANGES IN SS
+        date: hash["Date"],
+        eventID: hash["Event ID"],
+        confirmed: hash["Confirmed?"],
+        name: hash["Event"],
+        venue: hash["Venue"],
+        city: hash["City"],
+        payment: hash["Payment"]
+    }
 
 }
 //Decision tree
