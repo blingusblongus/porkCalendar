@@ -1,0 +1,7 @@
+-add rows to properties, (hashtable or series of getHeaderRow())?
+
+-complete gatherData()
+-complete createNewEvent()
+-Create editEvent()
+
+-replace calId placeholder in properties()
