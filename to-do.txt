@@ -5,3 +5,4 @@
 -Create editEvent()
 
 -replace calId placeholder in properties()
+-Support multiple day gigs
